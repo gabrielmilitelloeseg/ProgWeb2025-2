@@ -1,0 +1,9 @@
+GET http://localhost:3000/music/
+
+###
+
+GET http://localhost:3000/music/3
+
+###
+
+GET http://localhost:3000/music/16
