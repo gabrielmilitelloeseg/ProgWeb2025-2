@@ -3,7 +3,9 @@ const { readFile, writeFile } = require('node:fs/promises');
 const { STATUS_CODES } = require("node:http");
 const { Musica } = require("./Musica");
 
-const app = express(express.json())
+const app = express()
+
+app.use(express.json())
 
 const getMusicsForFile = () => {
     return readFile(
@@ -65,6 +67,16 @@ app
 .use((req,res, next) => {
 
     console.log(`${new Date().toString()} ${req.method} ${req.originalUrl}`)
+    // Headers CORS
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    
+    // Responde imediatamente para OPTIONS (PRÉ-FLIGHT)
+    if (req.method === 'OPTIONS') {
+        console.log('OPTIONS received - sending 200');
+        return res.sendStatus(200);
+    }
     next()
 
 })
