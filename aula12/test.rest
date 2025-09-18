@@ -1,0 +1,44 @@
+GET http://localhost:3000/music/
+
+###
+
+GET http://localhost:3000/music/3
+
+###
+
+GET http://localhost:3000/music/19
+
+###
+
+POST http://localhost:3000/music
+content-type: application/json
+
+{
+  "titulo": "Tempo Perdido",
+  "artista": "Legião Urbana",
+  "album": "Dois",
+  "ano": 1986,
+  "genero": "Rock Nacional",
+  "duracao_segundos": "308",
+  "popularidade": "94.9"
+}
+
+###
+
+DELETE http://localhost:3000/music/18
+
+###
+
+PUT http://localhost:3000/music/17
+content-type: application/json
+
+{
+  "id": 17,
+  "titulo": "Lanterna dos Afogados",
+  "artista": "Paralamas do Sucesso",
+  "album": "Bora-Bora",
+  "ano": 1989,
+  "genero": "Rock Nacional",
+  "duracao_segundos": 258,
+  "popularidade": 92.3
+}
