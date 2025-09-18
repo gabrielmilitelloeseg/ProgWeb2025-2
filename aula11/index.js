@@ -1,8 +1,9 @@
 const express = require("express")
 const { readFile, writeFile } = require('node:fs/promises');
+const { STATUS_CODES } = require("node:http");
 const { Musica } = require("./Musica");
 
-const app = express()
+const app = express(express.json())
 
 const getMusicsForFile = () => {
     return readFile(
@@ -89,7 +90,9 @@ app
     .catch(err => res.status(500).send('erro ao obter os dados'))
 })
 
-.post((req, res) => {
+.post('/music', (req, res) => {
+
+    console.log(req.body)
     
     const {body} = req
     if(!body) return res.status(400).send('Request body expected')
@@ -124,4 +127,3 @@ app.listen(3000, (err) => {
     if(err) console.log(err);
     console.log('listening on 3000')
 })
-
