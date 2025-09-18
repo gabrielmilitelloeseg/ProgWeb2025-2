@@ -1,6 +1,5 @@
 const express = require("express")
 const { readFile, writeFile } = require('node:fs/promises');
-const { STATUS_CODES } = require("node:http");
 const { Musica } = require("./Musica");
 
 const app = express()
@@ -139,3 +138,4 @@ app.listen(3000, (err) => {
     if(err) console.log(err);
     console.log('listening on 3000')
 })
+
