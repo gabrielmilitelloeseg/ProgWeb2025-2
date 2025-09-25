@@ -6,6 +6,12 @@
 * Implementar middleware de LOGS (anteriores aos handlers e posteriores ao handler) (AULA 14)
 * Implementar middleware de Autenticação (AULA 14)
 
+### Se usar IA:
+* Fazer um arquivo .md com a IA utilizada
+* No arquivo, mostrar os prompts
+* No arquivo, mostrar os resultados
+* O resultado funcionou para você?
+
 ### OPÇÃO 1 - Fazer uma API REST para 2 recursos
 
 Pré-requisito:
