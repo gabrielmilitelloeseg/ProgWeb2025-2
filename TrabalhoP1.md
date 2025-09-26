@@ -31,9 +31,9 @@ Pré-requisito:
   const { Database } = require('./database.js') // no arquivo que for usar
 ```
 
-* Usar o Módulo `sqlite3` (apartir da aula14 está no package.json)
+* Usar o Módulo `sqlite3` (a partir da aula14 está no package.json)
 ```> npm i sqlite3```
-* Se necessário fazer IDS como GUID usar o módulo `uuid` (apartir da aula14 está no package.json)
+* Se necessário fazer IDS como GUID usar o módulo `uuid` (a partir da aula14 está no package.json)
 ```> npm i uuid```
 * Fazer a conexão com o banco antes dos handlers de requisição (assim que o servidor sobe)
 * Fazer a criação / verificação da existência das tabelas necessárias antes dos handlers (assim que o servidor sobe)
