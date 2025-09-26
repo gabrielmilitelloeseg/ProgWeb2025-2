@@ -1,17 +1,31 @@
+### Solicita um token para o usuário com esse api_key
+POST http://localhost:3000/authenticate
+content-type: application/json
+
+{
+  "api_key":"4a8e078e-33b7-4d94-926f-27f79fe2e04c"
+}
+
+### Solicita a listagem das músicas (resumido e ordenado por popularidade)
+GET http://localhost:3000/music/
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyIiwiaWF0IjoxNzU4ODU2ODk2MzE5LCJpc3MiOiJlc2VnIiwiZXhwIjoxNzU4ODYwNDk2MzE5fQ==.SHQlIJP3ytMycZGDKyZTk3WFTtpTQdJtKVGBdp3hroU=
+
+### Solicita a listagem das músicas, mas sem autorização, deve retornar 403
 GET http://localhost:3000/music/
 
-###
 
+### Solicita detalhes da música de id 3
 GET http://localhost:3000/music/3
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyIiwiaWF0IjoxNzU4ODU2ODk2MzE5LCJpc3MiOiJlc2VnIiwiZXhwIjoxNzU4ODYwNDk2MzE5fQ==.SHQlIJP3ytMycZGDKyZTk3WFTtpTQdJtKVGBdp3hroU=
 
-###
+### Solicita detalhes da música de id 100, mas não há id 100, deve retornar 404
+GET http://localhost:3000/music/100
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyIiwiaWF0IjoxNzU4ODU2ODk2MzE5LCJpc3MiOiJlc2VnIiwiZXhwIjoxNzU4ODYwNDk2MzE5fQ==.SHQlIJP3ytMycZGDKyZTk3WFTtpTQdJtKVGBdp3hroU=
 
-GET http://localhost:3000/music/19
-
-###
-
+### Insere a música na lista, deve retornar o id que ela receber pós inserção
 POST http://localhost:3000/music
 content-type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyIiwiaWF0IjoxNzU4ODU2ODk2MzE5LCJpc3MiOiJlc2VnIiwiZXhwIjoxNzU4ODYwNDk2MzE5fQ==.SHQlIJP3ytMycZGDKyZTk3WFTtpTQdJtKVGBdp3hroU=
 
 {
   "titulo": "Tempo Perdido",
@@ -23,14 +37,15 @@ content-type: application/json
   "popularidade": "94.9"
 }
 
-###
-
+### Remove a música com id 18, se não houver, retorna 404
 DELETE http://localhost:3000/music/18
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyIiwiaWF0IjoxNzU4ODU2ODk2MzE5LCJpc3MiOiJlc2VnIiwiZXhwIjoxNzU4ODYwNDk2MzE5fQ==.SHQlIJP3ytMycZGDKyZTk3WFTtpTQdJtKVGBdp3hroU=
 
-###
 
+###Altera a música com id 17, se não houver, retorna 404
 PUT http://localhost:3000/music/17
 content-type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIyIiwiaWF0IjoxNzU4ODU2ODk2MzE5LCJpc3MiOiJlc2VnIiwiZXhwIjoxNzU4ODYwNDk2MzE5fQ==.SHQlIJP3ytMycZGDKyZTk3WFTtpTQdJtKVGBdp3hroU=
 
 {
   "id": 17,

@@ -1,17 +1,25 @@
 const { readFile, writeFile } = require('node:fs/promises')
 const fileName = './data.json'
-const encodingOption = { encoding : 'utf-8'}
+const usersFile = './users.json'
+const encodingOption = { encoding: 'utf-8' }
 
 const getData = () => {
     return readFile(
         fileName,
         encodingOption
     )
-    .then(x => JSON.parse(x))
+        .then(x => JSON.parse(x))
 }
 
 const setData = (data) => {
     return writeFile(fileName, JSON.stringify(data), encodingOption)
+}
+
+const getUsers = () => {
+    return readFile(
+        usersFile,
+        encodingOption
+    ).then(x => JSON.parse(x))
 }
 
 const getMusics = () => {
@@ -29,21 +37,21 @@ const deleteMusic = async (ID) => {
 }
 
 const getMusicByID = (ID) => {
-    return getMusicsForFile()
-    .then(ms => 
-        ms.reduce((result, item) => {
-        if(item.id === ID) return item
-        else return result
-    }, undefined))
+    return getMusics()
+        .then(ms =>
+            ms.reduce((result, item) => {
+                if (item.id === ID) return item
+                else return result
+            }, undefined))
 }
 
 const addMusic = async music => {
     const data = await getData()
 
-    const {nextId, musicas} = data 
-    
+    const { nextId, musicas } = data
+
     music.id = nextId
-    
+
     const newData = {
         nextId: nextId + 1,
         musicas: [...musicas, music]
@@ -56,10 +64,10 @@ const addMusic = async music => {
 const insertMusic = async (id, music) => {
     const data = await getData()
 
-    const {nextId, musicas} = data
+    const { nextId, musicas } = data
 
     music.id = id
-    
+
     const newData = {
         nextId,
         musicas: [...musicas, music]
@@ -68,10 +76,20 @@ const insertMusic = async (id, music) => {
     return await setData(newData).then(() => music)
 }
 
-module.exports = { 
-    getMusics, 
-    deleteMusic, 
-    addMusic, 
-    insertMusic, 
-    getMusicByID
+const getUserByApiKey = async (api_key) => {
+
+    return getUsers().then(us => us.reduce((result, item) => {
+        if (item.api_key === api_key) return item
+        else return result
+    }, undefined))
+
+}
+
+module.exports = {
+    getMusics,
+    deleteMusic,
+    addMusic,
+    insertMusic,
+    getMusicByID,
+    getUserByApiKey
 }
