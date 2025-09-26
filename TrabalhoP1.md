@@ -4,7 +4,7 @@
 
 * Implementar middleware para CORS (AULA 11)
 * Implementar middleware de LOGS (anteriores aos handlers e posteriores ao handler) (AULA 14)
-* Implementar middleware de Autenticação (AULA 14)
+* Implementar middleware de Autenticação, lembrando de deixar a rota do token sem autenticação (AULA 14)
 
 ### Se usar IA:
 * Fazer um arquivo .md com a IA utilizada
@@ -39,6 +39,6 @@ Pré-requisito:
   * Fazer a criação / verificação da existência das tabelas necessárias antes dos handlers (assim que o servidor sobe)
   * Fazer as consultas e operações necessárias nos handlers
  
-  Exemplo de código SQLITE e uso do UUID no arquivo `sqlite.js` na pasta aula14.
+  Exemplo de código SQLITE e uso do UUID no arquivo `_exemplo_sqlite.js` na pasta aula14.
  
   
