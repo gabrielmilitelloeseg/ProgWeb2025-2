@@ -7,7 +7,7 @@
 * Implementar middleware de Autenticação, lembrando de deixar a rota do token sem autenticação (AULA 14)
 
 ### Se usar IA:
-* Fazer um arquivo .md com a IA utilizada
+* Fazer um arquivo .md explicitando o nome da IA utilizada
 * No arquivo, mostrar os prompts
 * No arquivo, mostrar os resultados
 * O resultado funcionou para você?
@@ -21,24 +21,24 @@ Pré-requisito:
 * Ter implementados os métodos GET (listagem + detalhes), POST (inserção), PUT (alteração), DELETE (remoção)
 * Ter os devidos tratamentos de erros usando os códigos HTTP devidos e com as boas práticas discutidas em aula
 
-  ### OPÇÃO 2 - Implementar na API feita em aula um banco de dados em arquivo SQLITE
+### OPÇÃO 2 - Implementar na API feita em aula um banco de dados em arquivo SQLITE
 
-  Pré-requisito:
+Pré-requisito:
 
-  * Isolar toda a lógica do acesso a dados em um módulo separado
-  ```js
+* Isolar toda a lógica do acesso a dados em um módulo separado
+```js
   module.exports = { Database } // no arquivo do módulo
   const { Database } = require('./database.js') // no arquivo que for usar
-  ```
+```
 
-  * Usar o Módulo `sqlite3` (apartir da aula14 está no package.json)
-    ```> npm i sqlite3```
-  * Se necessário fazer IDS como GUID usar o módulo `uuid` (apartir da aula14 está no package.json)
-     ```> npm i uuid```
-  * Fazer a conexão com o banco antes dos handlers de requisição (assim que o servidor sobe)
-  * Fazer a criação / verificação da existência das tabelas necessárias antes dos handlers (assim que o servidor sobe)
-  * Fazer as consultas e operações necessárias nos handlers
+* Usar o Módulo `sqlite3` (apartir da aula14 está no package.json)
+```> npm i sqlite3```
+* Se necessário fazer IDS como GUID usar o módulo `uuid` (apartir da aula14 está no package.json)
+```> npm i uuid```
+* Fazer a conexão com o banco antes dos handlers de requisição (assim que o servidor sobe)
+* Fazer a criação / verificação da existência das tabelas necessárias antes dos handlers (assim que o servidor sobe)
+* Fazer as consultas e operações necessárias nos handlers
  
-  Exemplo de código SQLITE e uso do UUID no arquivo `_exemplo_sqlite.js` na pasta aula14.
+Exemplo de código SQLITE e uso do UUID no arquivo `_exemplo_sqlite.js` na pasta aula14.
  
   
