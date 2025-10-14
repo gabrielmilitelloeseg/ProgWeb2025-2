@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Meu Projeto</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  
+  <header>
+    <nav>
+      <a href="index.html">index</a>
+      <a href="form.html">form</a>
+      <a href="">teste 3</a>
+    </nav>
+  </header>
+  
+  <main>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse faucibus tristique tellus sed aliquet. Quisque faucibus mi tortor, sit amet consequat elit pretium non. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer sapien ligula, vestibulum vitae interdum eu, ornare eu nunc. Praesent nec lorem dolor. Quisque elementum accumsan nisl sit amet accumsan. Nunc ac quam at felis elementum blandit. Nunc ornare suscipit auctor. Nunc suscipit lacus eu viverra blandit. Integer suscipit aliquam ligula, non tincidunt ex interdum id. Quisque pharetra tortor in arcu semper, ut fermentum velit malesuada. Morbi hendrerit consectetur lectus, et tempor neque vestibulum vel.
+      <br/><br/>
+      Cras sed consequat sem. Suspendisse pharetra, nisi at facilisis mattis, ligula nunc varius ex, non vehicula mauris leo sed massa. Nulla facilisi. Nunc posuere mauris nunc, sit amet varius lectus euismod sit amet. Vivamus sodales tellus quis tortor aliquam, eget condimentum eros facilisis. Vestibulum elementum magna ligula, ac efficitur nunc feugiat pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      <br/><br/>
+      Fusce laoreet pulvinar lacus a egestas. Vivamus ullamcorper lectus dui, at ultrices dui dapibus vel. Fusce vitae mollis massa, a fermentum nunc. Mauris non tortor neque. Nulla pellentesque purus orci, laoreet maximus felis dignissim vel. Nullam at tincidunt massa, eget feugiat tellus. In non justo at urna efficitur cursus. Phasellus ac tempus sapien. Aenean rhoncus et nibh a tincidunt. Phasellus a interdum quam, et suscipit nisl.
+      <br/><br/>
+      Fusce lectus nibh, vehicula ut leo lacinia, euismod porta sem. Curabitur sit amet ornare dui. Integer lacus dolor, laoreet vitae tincidunt eget, sodales tempus quam. Maecenas malesuada tempus sem, a interdum lectus consectetur nec. Sed luctus tellus non efficitur pretium. Donec fermentum quam id eleifend dignissim. Phasellus vel tempus purus.
+      <br/><br/>
+      Mauris eget odio porta, eleifend magna id, condimentum est. Proin nunc justo, scelerisque non risus ut, tempor vulputate tortor. Nulla nec ipsum nisl. Fusce tempus quam in urna vehicula, quis blandit arcu tristique. Proin eu neque nec dui lobortis bibendum sit amet laoreet eros. Suspendisse ut nisi mollis, aliquam augue at, tristique quam. Donec mattis nunc quis eros sollicitudin sollicitudin. Sed luctus, lorem vitae semper maximus, ex nisl dictum ante, eu feugiat felis turpis quis felis. Integer et risus id magna commodo euismod ultricies ut risus. Quisque lacus odio, tincidunt sed semper et, feugiat tempor lorem. Fusce cursus gravida lorem, in cursus metus ultricies at.
+    </p>
+  </main>
+  
+  <footer>
+    <small>&copy; <span id="ano"></span> Meu Projeto</small>
+  </footer>
+
+  <!-- Script (defer para aguardar o parsing do HTML) -->
+  <script src="index.js" defer></script>
+  <script>
+    const span = document.querySelector('#ano')
+    span.textContent = new Date().getFullYear()
+  </script>
+</body>
+</html>
