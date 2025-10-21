@@ -1,0 +1,38 @@
+body {
+    background-color: #333;
+    width: 90%;
+    margin:0;
+    margin-left:auto;
+    margin-right:auto;
+    font-family: "Roboto", sans-serif;
+}
+
+nav, main, footer {
+    background-color: #eee;
+    margin:0;
+}
+
+nav{
+    padding: 20px;
+}
+
+footer{
+    padding:5px;
+}
+
+main{
+    margin:5px 0;
+}
+
+nav a{
+    margin: 2px;
+    padding:10px;
+    color:#333;
+    text-decoration: none;
+}
+
+main p{
+    padding: 40px;
+    line-height: 25px;
+    margin:0
+}
