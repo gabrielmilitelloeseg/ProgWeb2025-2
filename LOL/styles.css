@@ -7,17 +7,21 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
     background: #0a1428;
     color: #cdbe91;
     min-height: 100vh;
 }
 
 .card {
-    width: 5in;
-    height: 7in;
+    width: 2.5in;
+    height: 3.5in;
     background-color: transparent;
     perspective: 1000px;
+    border-radius: 5px;
 }
 
 .card-inner {
@@ -27,6 +31,7 @@ body {
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
+    border-radius: 5px;
 }
 
 .card:hover .card-inner {
@@ -41,18 +46,33 @@ body {
     -webkit-backface-visibility: hidden;
     /* Safari */
     backface-visibility: hidden;
+    border-radius: 5px;
+    color: #cfb53b;
 }
 
 .card-front {
-    background-color: #bbb;
-    color: black;
+    background: radial-gradient(circle at 50% 30%, #4a2a8c, #000000);
 }
 
 
 .card-back {
-    background-color: dodgerblue;
-    color: white;
+    background: radial-gradient(circle at 50% 30%, #4a2a8c, #000000);
+    color: #c0c0c0;
     transform: rotateY(180deg);
 }
 
-/* Add your LoL card styles below */
+.silver {
+    color: #c0c0c0;
+}
+
+.gold {
+    color: #ffd700;
+}
+
+.brass {
+    color: #b5a642;
+}
+
+.gold-warm {
+    color: #cfb53b;
+}
