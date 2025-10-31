@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>League of Legends Cards</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
 
     <link rel="stylesheet" href="styles.css">
@@ -14,23 +15,77 @@
 
 <body>
 
-    <main>
-        <div class='card'>
-            <div class='card-inner'>
-                <div class="card-front">
-                    Frente
+    <main id="main"></main>
+
+    <template id="card-template">
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front" style="background-image: url({{IMAGE}});">
+                    <div class="card-title">
+                        <h1>{{NAME}}</h1>
+                        <p>{{TITLE}}</p>
+                    </div>
+                    <div class="card-status">
+                        <h2><img src="img/sword.png" /> {{ATT}}</h2>
+                        <h2><img src="img/shield.png" /> {{DEF}}</h2>
+                        <h2><img src="img/staff.png" /> {{MAG}}</h2>
+                    </div>
                 </div>
                 <div class="card-back">
-                    Trás
+                    <img src='img/logo.png' />
                 </div>
             </div>
-
-        </div>
-
-    </main>
-
+    </template>
 
     <script src="index.js"></script>
 </body>
 
 </html>
+
+<!--
+    <div class="toggle-switch toggled">
+        <div class="toggle-button"></div>
+    </div>
+    <style>
+        :root {
+            --toggle-width: 30px;
+            --toggle-height: calc(var(--toggle-width) / 2);
+            --toggle-border-radius: calc(var(--toggle-height) / 2)
+        }
+
+        .toggle-switch {
+            width: var(--toggle-width);
+            height: var(--toggle-height);
+            padding: 1px;
+            background-color: white;
+            border-radius: var(--toggle-border-radius);
+        }
+
+        .toggle-switch.toggled {
+            background-color: #4a2a8c;
+        }
+
+        .toggle-switch .toggle-button {
+            width: calc(var(--toggle-width) / 2 - 2px);
+            height: calc(var(--toggle-height) - 2px);
+            background-color: silver;
+            border-radius: 50%;
+            transform: translateX(0px);
+            transition: transform 0.2s ease;
+        }
+
+        .toggle-switch.toggled .toggle-button {
+            transform: translateX(calc(var(--toggle-width) / 2 + 2px));
+            transition: transform 0.2s ease;
+        }
+    </style>
+    <script>
+        const toggles = [...document.querySelectorAll('.toggle-switch')]
+
+        toggles.forEach(element => {
+            element.addEventListener('click', function () {
+                this.classList.toggle('toggled')
+            })
+        });
+    </script>
+-->
