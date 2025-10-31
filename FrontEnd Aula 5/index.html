@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>League of Legends Cards</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+    </style>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <main id="main">
+        
+    </main>
+
+
+    <template id="card-template">
+        <div id="card-template" class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="card-title">
+                        <h1>{{NAME}}</h1>
+                        <p>{{TITLE}}</p>
+                    </div>
+                    <div class="card-image" style="background-image: url(/img/champion/{{IMAGE}});"></div>
+                    <div class="card-status">
+                        <div>
+                            <h2>Att: {{ATT}}</h2>
+                            <h2>Def: {{DEF}}</h2>
+                        <div>
+                        </div>
+                            <h2>Mag: {{MAG}}</h2>
+                            <h2>Dif: {{DIF}}</h2>
+                        </div>
+                    </div>
+                </div>
+                    <div class="card-back">
+                    Trás
+                </div>
+            </div>
+        </div>
+    </template>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
