@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>League of Legends Cards</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class='controls'>
+        <select id="tag">
+            <option value="">Selecione...</option>
+        </select>
+
+        <select id="order">
+            <option value="">Selecione...</option>
+            <option value="Attack">Attack</option>
+            <option value="Defence">Defence</option>
+            <option value="Magic">Magic</option>
+        </select>
+    </div>
+    <main id="main"></main>
+
+    <template id="card-template">
+        <div class="card flipped">
+            <div class="card-inner">
+                <div class="card-front" style="background-image: url({{IMAGE}});">
+                    <div class="card-title">
+                        <h1>{{NAME}}</h1>
+                        <p>{{TITLE}}</p>
+                    </div>
+                    <div>
+                        <div class="card-tags">
+                            {{TAGS}}
+                        </div>
+                        <div class="card-status">
+                            <div><img src="img/sword.png" /> {{ATT}}</div>
+                            <div><img src="img/shield.png" /> {{DEF}}</div>
+                            <div><img src="img/staff.png" /> {{MAG}}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <!-- <img src='img/logo.png' /> -->
+                     <div class="stat-level-controls">
+                        <button data-minus-level="">-</button>
+                        <input type="text" value="1"></input>
+                        <button data-plus-level="">+</button>
+                     </div>
+                    <div class="stats">
+                        {{STATS}}
+                    </div>
+                </div>
+            </div>
+    </template>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
+
+<!--
+    <div class="toggle-switch toggled">
+        <div class="toggle-button"></div>
+    </div>
+    <style>
+        :root {
+            --toggle-width: 30px;
+            --toggle-height: calc(var(--toggle-width) / 2);
+            --toggle-border-radius: calc(var(--toggle-height) / 2)
+        }
+
+        .toggle-switch {
+            width: var(--toggle-width);
+            height: var(--toggle-height);
+            padding: 1px;
+            background-color: white;
+            border-radius: var(--toggle-border-radius);
+        }
+
+        .toggle-switch.toggled {
+            background-color: #4a2a8c;
+        }
+
+        .toggle-switch .toggle-button {
+            width: calc(var(--toggle-width) / 2 - 2px);
+            height: calc(var(--toggle-height) - 2px);
+            background-color: silver;
+            border-radius: 50%;
+            transform: translateX(0px);
+            transition: transform 0.2s ease;
+        }
+
+        .toggle-switch.toggled .toggle-button {
+            transform: translateX(calc(var(--toggle-width) / 2 + 2px));
+            transition: transform 0.2s ease;
+        }
+    </style>
+    <script>
+        const toggles = [...document.querySelectorAll('.toggle-switch')]
+
+        toggles.forEach(element => {
+            element.addEventListener('click', function () {
+                this.classList.toggle('toggled')
+            })
+        });
+    </script>
+-->
